@@ -1,5 +1,5 @@
 const Mongoose = require("mongoose")
-const localDb = `mongodb://localhost:27017/jwtauth`
+const localDb = process.env.DATABASE_URL
 
 const connectDb = async () => {
     await Mongoose.connect(localDb, {
